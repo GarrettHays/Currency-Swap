@@ -18,16 +18,20 @@ function clearOutput() {
   $('#errorMessage').text("");
 }
 
-// error handling - check how error is passed back from API call
-// response "result": "error" or "error-type" 
-// another IF? 404?
-
 function getElements(response) {
   const exchange = JSON.parse(response);
-  $('#userCurrency').text(`Base Currency: ${exchange.base_code}`);
-  $('#newCurrency').text(`Converted Currency: ${exchange.target_code}`);
-  $('#conversionRate').text(`Conversion Rate: ${exchange.conversion_rate}`);
-  $('#amountConverted').text(`Amount in Converted Currency: ${exchange.conversion_result}`);
+  if (response.includes("unsupported-code")) {
+    $('.showConversion').hide();
+    $('.errorDisplay').show();
+    $('#errorMessage').text(`We do not currently support this currency. Please confirm currency code is correct and try again.`);
+  } else {
+    $('.showConversion').show();
+    $('.errorDisplay').hide();
+    $('#userCurrency').text(`Base Currency: ${exchange.base_code}`);
+    $('#newCurrency').text(`Converted Currency: ${exchange.target_code}`);
+    $('#conversionRate').text(`Conversion Rate: ${exchange.conversion_rate}`);
+    $('#amountConverted').text(`Amount in ${exchange.target_code} after converted from ${exchange.base_code}: ${exchange.conversion_result}`);
+  }
 }
 
 async function makeApiCall(currencyAmt, currencyFrom, currencyTo) {
