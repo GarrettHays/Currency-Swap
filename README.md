@@ -31,15 +31,15 @@ This application requires the user to supply three inputs - amount, currency to 
 * _Copy the repository URL for project named Currency Swap_
 * _Clone the copied repository to your desktop using the "git clone" command in a shell program_
 * _Open the cloned directory Currency Swap_
-* _Using your shell program, navigate to the root directory of the newly created "Currency-Exchage" directory_
+* _Using your shell program, navigate to the root directory of the newly created Currency Swap directory_
 * _Once in the root directory, create a file named ".env"_
 * _Navigate to the newly created .env file. Add your API key by typing "API_KEY={your key here}"_
-* _While still in the root directory, add another file named ".gitignore" if one does not already exist_
+* _While still in the root directory, add another file named ".gitignore" (if one does not already exist)_
 * _Add .env to your .gitignore file_
 * _Using your shell program, commit the .gitignore file to your GitHub remote repository_
 * _Ensuring you are still in the root directory, run "npm install" in your shell program_
 * _After installation, run "npm run build" in your shell program_
-* _Locate the index.html file inside the dist/ directory, then open with Live Server to run application_
+* _Locate the index.html file inside the dist directory, then open with Live Server to run application_
 
 ## Known Bugs
 
