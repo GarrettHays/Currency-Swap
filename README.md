@@ -13,6 +13,8 @@
 * _Node.js_
 * _npm_
 * _Webpack_
+* _ESLint_
+* Babel
 * _API_
 
 ## Description
