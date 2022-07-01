@@ -6,6 +6,8 @@ export default class CurrencyExchange {
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
+        } if (this.status === 404) {
+          resolve(request.response); 
         } else {
           reject(request.response);
         }
