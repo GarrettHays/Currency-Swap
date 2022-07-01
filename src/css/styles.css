@@ -36,6 +36,7 @@
 .currency-subhead, .errorDisplay, .showConversion, .zeroCurrency{
   color: white;
   padding-top: 25px;
+  padding-bottom: 20px;
   font-family: Arial;
   letter-spacing: 0.05em;
   opacity: 0.8;
