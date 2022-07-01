@@ -10,23 +10,33 @@
       Welcome to the Currency Exchange Portal. To use the CXP, first enter the amount you'd like to exchange. Next, select the currencies you would like to exchange from and to.
     </p>
     <form id = "currencyForm">
-      <input id="currencyAmount" type="number" placeholder="Amount" required>
-      <select name="currencyFrom" id="currencyFrom" placeholder="Currecy Exchange From" required>
-        <option value="" disabled selected hidden>Currency to Exchange</option>
-        <option value="USD">U.S. Dollars</option>
-        <option value="GBP">British Pounds</option>
-        <option value="EUR">Euros</option>
-        <option value="MXN">Mexican Pesos</option>
-        <option value="CHF">Swiss Francs</option>
-      </select>
-      <select name="currencyTo" id="currencyTo" required>
-        <option value="" disabled selected hidden>Currency to Obtain</option>
-        <option value="USD">U.S. Dollars</option>
-        <option value="GBP">British Pounds</option>
-        <option value="EUR">Euros</option>
-        <option value="MXN">Mexican Pesos</option>
-        <option value="CHF">Swiss Francs</option>
-      </select>
+        <input id="currencyAmount" type="number" placeholder="Amount" required>
+        <select name="currencyFrom" id="currencyFrom" placeholder="Currecy Exchange From" required>
+          <option value="" disabled selected hidden>Currency to Exchange</option>
+          <option value="USD">U.S. Dollars</option>
+          <option value="GBP">British Pounds</option>
+          <option value="EUR">Euros</option>
+          <option value="MXN">Mexican Pesos</option>
+          <option value="CHF">Swiss Francs</option>
+          <option value="CAD">Canadian Dollars</option>
+          <option value="JPY">Japanese Yen</option>
+          <option value="SEK">Swedish Krona</option>
+          <option value="INR">Indian Rupee</option>
+          <option value="THB">Thai Baht</option>
+        </select>
+        <select name="currencyTo" id="currencyTo" required>
+          <option value="" disabled selected hidden>Currency to Obtain</option>
+          <option value="USD">U.S. Dollars</option>
+          <option value="GBP">British Pounds</option>
+          <option value="EUR">Euros</option>
+          <option value="MXN">Mexican Pesos</option>
+          <option value="CHF">Swiss Francs</option>
+          <option value="CAD">Canadian Dollars</option>
+          <option value="JPY">Japanese Yen</option>
+          <option value="SEK">Swedish Krona</option>
+          <option value="INR">Indian Rupee</option>
+          <option value="THB">Thai Baht</option>
+        </select>
       <button class="btn-success" id="currencyButton">Convert Currency</button>
     </form>
     <div class="showConversion">
@@ -39,6 +49,9 @@
     </div>
     <div class="errorDisplay">
       <div id="errorMessage"></div>
+    </div> 
+    <div class="zeroCurrency">
+      <div id="zeroCurrency"></div>
     </div> 
   </div>
   </div>
