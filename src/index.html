@@ -3,8 +3,12 @@
   <title>Currency Exchange Portal</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Currency Exchange Portal</h1>
+  <div class="currency-container">
+  <div class="currency">
+    <h1 class="currency-head">Currency Exchange Portal</h1>
+    <p class="currency-subhead">
+      Welcome to the Currency Exchange Portal. To use the CXP, first enter the amount you'd like to exchange. Next, select the currencies you would like to exchange from and to.
+    </p>
     <form id = "currencyForm">
       <input id="currencyAmount" type="number" placeholder="Amount" required>
       <select name="currencyFrom" id="currencyFrom" placeholder="Currecy Exchange From" required>
@@ -31,9 +35,12 @@
         <div id="newCurrency"></div>
         <div id="conversionRate"></div>
         <div id="amountConverted"></div>
-        <div id="errorMessage"></div>
       </div>
     </div>
+    <div class="errorDisplay">
+      <div id="errorMessage"></div>
+    </div> 
+  </div>
   </div>
 </body>
 </html>
