@@ -6,9 +6,23 @@
   <div class="container">
     <h1>Currency Exchange Portal</h1>
     <form id = "currencyForm">
-      <input id="currencyAmount" type="text" placeholder="Amount" required>
-      <input id="currencyFrom" type="text" placeholder="Currecy Exchange From" required>
-      <input id="currencyTo" type="text" placeholder="Currency Exchange To" required>
+      <input id="currencyAmount" type="number" placeholder="Amount" required>
+      <select name="currencyFrom" id="currencyFrom" placeholder="Currecy Exchange From" required>
+        <option value="" disabled selected hidden>Currency to Exchange</option>
+        <option value="USD">U.S. Dollars</option>
+        <option value="GBP">British Pounds</option>
+        <option value="EUR">Euros</option>
+        <option value="MXN">Mexican Pesos</option>
+        <option value="CHF">Swiss Francs</option>
+      </select>
+      <select name="currencyTo" id="currencyTo" required>
+        <option value="" disabled selected hidden>Currency to Obtain</option>
+        <option value="USD">U.S. Dollars</option>
+        <option value="GBP">British Pounds</option>
+        <option value="EUR">Euros</option>
+        <option value="MXN">Mexican Pesos</option>
+        <option value="CHF">Swiss Francs</option>
+      </select>
       <button class="btn-success" id="currencyButton">Convert Currency</button>
     </form>
     <div class="showConversion">
