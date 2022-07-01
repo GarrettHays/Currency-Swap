@@ -2,14 +2,21 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
+import CurrencyExchange from './currency-exchange';
 
+async function makeApiCall(currencyAmt, currencyFrom, currencyTo) {
+  const response = await CurrencyExchange.getExchange(currencyAmt, currencyFrom, currencyTo);
+  getElements(response);
+}
 
-$('#currencyButton').submit(function(event) {
-  event.preventDefault();
-  let currencyAmt = $('#currencyAmount').val();
-  let currencyFrom = $('#currencyFrom').val();
-  let currencyTo = $('#currencyTo').val();
-  clearFields();
-  // clearOutput();
-  makeApiCall(currencyAmt, currencyFrom, currencyTo);
+$(document).ready(function() {
+  $('#currencyButton').click(function(event) {
+    event.preventDefault();
+    clearOutput();
+    let currencyAmt = $('#currencyAmount').val();
+    let currencyFrom = $('#currencyFrom').val();
+    let currencyTo = $('#currencyTo').val();
+    makeApiCall(currencyAmt, currencyFrom, currencyTo);
+    clearFields();
+  });
 });
